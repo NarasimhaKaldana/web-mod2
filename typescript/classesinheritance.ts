@@ -1,0 +1,59 @@
+class Vehicle{
+
+      name:string;
+      constructor(name:string){
+      this.name = name;
+}
+getName():string{
+    return this.name;
+}
+}
+
+
+class Car extends Vehicle{
+    model: string;
+    constructor(model:string,name:string){
+        super(name);
+        this.model = model;
+    }
+    getNameModel():string{
+        return this.model+
+        this.name;
+    }
+}
+
+
+class Truck extends Vehicle {
+    constructor(name:string){
+        super(name);
+    }
+}
+
+
+var mycar = new Car("Sports Model...","BMW")
+console.log(mycar.getNameModel);
+
+var truck = new Truck("Tata  truck")
+console.log(truck.getName);
+
+
+// interface paint{
+//     drawPoint():void;
+
+// }
+// interface Paint2D{
+// draw2DImage():void;
+
+// }
+
+
+// class Circle implements Paint2D,Paint2D{
+//     draw2DImage(): void {
+//         console.log("drawing a 2d")
+//     }
+//     drawPoint():void{
+//         console.log("drawing line")
+//     }
+// }
+
+

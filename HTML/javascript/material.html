@@ -1,0 +1,98 @@
+Array.map()
+Returns a new array with the results of calling a provided function on every element in this array.
+
+const list = [1, 2, 3, 4];	  	
+list.map((el) => el * 2); // [2, 4, 6, 8]
+
+Array.filter()
+Returns a new array with all elements that pass the test implemented by the provided function.
+
+const list = [1, 2, 3, 4];
+list.filter((el) => el % 2 === 0); // [2, 4]
+
+Array.reduce()
+Reduce the array to a single value. The value returned by the function is stored in an accumulator (result/total).
+
+const list = [1, 2, 3, 4, 5];
+list.reduceRight((total, item) => total + item, 0); // 15
+const list = [1, 2, 3, 4, 5];
+list.reduce((total, item) => total + item, 0); // 15
+
+const list = [1, 2, 3, 4, 5];
+list.reduceRight((total, item) => total + item, 0); // 15
+
+Array.fill()
+Fill the elements in an array with a static value.
+
+const list = [1, 2, 3, 4, 5];
+list.fill(0); // [0, 0, 0, 0, 0]
+
+Array.find()
+Returns the value of the first element in the array that satisfies the provided testing function. Otherwise undefined is returned.
+
+const list = [1, 2, 3, 4, 5];
+list.find((el) => el === 3); // 3
+list.find((el) => el === 6); // undefined
+
+
+Array.indexOf()
+Returns the first index at which a given element can be found in the array, or -1 if it is not present.
+const list = [1, 2, 3, 4, 5];
+list.indexOf(3); // 2
+list.indexOf(6); // -1
+
+const list = [1, 2, 3, 4, 5];
+list.lastIndexOf(3); // 2
+list.lastIndexOf(3, 1); // -1
+
+Returns the index of the first element in the array that satisfies the provided testing function. Otherwise, -1 is returned.
+const array = [5, 12, 8, 130, 44];
+array.findIndex((element) => element > 13); 
+
+const list = [1, 2, 3, 4, 5];
+list.includes(3); // true
+list.includes(6); // false
+
+const list = [1, 2, 3, 4, 5];
+list.pop(); // 5
+list; // [1, 2, 3, 4]
+
+
+const list = [1, 2, 3, 4, 5];
+list.push(6); // 6
+list; // [1, 2, 3, 4, 5, 6]
+
+Removes the first element from an array and returns that element.
+const list = [1, 2, 3, 4, 5];
+list.shift(); // 1
+list; // [2, 3, 4, 5]
+
+Adds new elements to the beginning of an array, and returns the new length.
+const list = [1, 2, 3, 4, 5];
+list.unshift(0); // 6
+list; // [0, 1, 2, 3, 4, 5]
+
+
+Array.splice()
+Changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+
+const list = [1, 2, 3, 4, 5];
+list.splice(1, 2); // [2, 3]
+list; // [1, 4, 5]
+
+Array.slice()
+Returns a shallow copy of a portion of an array into a new array object selected from beginning to end (end not included). The original array will not be modified.
+const list = [1, 2, 3, 4, 5];
+list.slice(1, 3); // [2, 3]
+list; // [1, 2, 3, 4, 5]
+Array.join()
+Joins all elements of an array into a string.
+const list = [1, 2, 3, 4, 5];
+list.join(', '); // "1, 2, 3, 4, 5"
+
+const list = [1, 2, 3, 4, 5];
+list.reverse(); // [5, 4, 3, 2, 1]
+list; // [5, 4, 3, 2, 1]
+
+Array.sort()
+Sorts the elements of an array in place and returns the array. The default sort order is according to string Unicode code points.

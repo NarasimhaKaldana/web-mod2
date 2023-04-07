@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1 style="color: brown;" id="tool" class="dev">
+        Intro to dev tools
+    </h1>
+
+    <script>
+        console.log('Tesing console Dev Tool...!');
+        console.error('....error log');
+        console.warn('warning');
+
+
+
+        console.table(
+    [
+        {"name":"Narasimha","age":23},
+        {"name":"Veerababu","age":25}
+        ]);
+
+          
+        console.group('groupInfo');
+        console.log('raj');
+        console.log('ram');
+        console.log('raheem');
+
+
+        console.log(document);
+        console.log(document.URL);
+        console.dir(document);
+
+        localStorage.setItem("topic", "Dev tools after lunch");
+        console.log(localStorage.getItem('topic'));
+        //document.cookie=new cookie("url","https://secureurl.com");
+        document.cookie="url=https://secureurl.com";
+        document.cookie="name=simha";
+        </script>
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+*{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+header,main,aside,footer{
+    border-color: brown;
+    border-style: groove;
+}
+
+header{
+    height: 100px;
+    display: flex; /* row wise with no wrap */
+    flex-wrap: nowrap;
+    margin: 5px;
+}
+
+header h1{
+    line-height: 100px;
+    text-align: center;
+}
+
+nav{
+    display: flex;
+    direction: row;
+}
+
+a{
+    line-height: 100px;
+    text-align: center;
+    text-decoration: none;
+}
+
+main{
+    margin: 5px;
+    display: flex;
+    flex: auto;
+    height: max-content;
+
+    /*this will push the footer and accomodates more content */
+}
+
+section{
+    text-align: center;
+    height: fit-content;
+}
+
+#as-left{
+    width: 25%;
+    height: fit-content;
+}
+
+#as-right{
+    text-align: center;
+    width: 25%;
+    height: fit-content;
+}
+
+footer{
+    text-align: center;
+    background-color:chocolate;
+    margin: 5px;
+    height: 50px;
+}

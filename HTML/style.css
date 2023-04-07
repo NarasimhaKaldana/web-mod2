@@ -1,0 +1,12 @@
+h2 {
+    color:rgb(151, 66, 66);
+    text-align: center;
+}
+
+.mytable{
+    font-size: 15px;
+    color:purple;
+    align-items: center;
+    background-color:rgb(39, 139, 185);
+    border: 5px solid black;
+}

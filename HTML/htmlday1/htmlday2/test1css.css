@@ -1,0 +1,49 @@
+h1{
+    font-family: 'Alkatra', cursive;
+}
+div{
+    border: 1px solid black;
+}
+*{
+    padding: 5px;
+    margin: 5px;
+}
+body{
+    border-top: blueviolet;
+    border-style: dashed;
+    border-color: aqua;
+    border-width: 3px;
+    background-color: antiquewhite;
+}
+div{
+    width: 1200px;
+    height: 200px;
+    border: 10px;
+    border-style: groove;
+    border-color: blueviolet;
+    padding: 20px;
+    margin: 10px;
+}
+.p1{
+    background-color: rgb(43, 226, 125);
+}
+.first-para{
+    font-size: x-large;
+    color: rgb(212, 125, 11);
+}
+#first>h1{
+    font-family: 'Alkatra', cursive;
+font-family: 'Raleway', sans-serif;
+}
+#second>h1{
+    font-family: 'Alkatra', cursive;
+font-family: 'Raleway', sans-serif;
+}
+#third>h1{
+    font-family: 'Alkatra', cursive;
+font-family: 'Raleway', sans-serif;
+}
+span{
+    color: brown;
+}
+

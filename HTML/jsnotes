@@ -1,0 +1,176 @@
+What is  JavaScript ?
+JavaScript is an Interpreted programming and scripting language. 
+Easier to code than the compiled languages like C and C++.
+Lightweight and most commonly used script in web pages.
+Most popular programming language in the world.
+Standardized in the ECMA Script language  specification.
+The JavaScript language is open source and available free.
+JavaScript language runs in the browser.
+JavaScript adds interactivity to HTML pages.
+Allow client side  user to interact and create dynamic pages.
+Client-side means that the JavaScript language runs in the browser.
+
+Where JavaScript is Used ?
+Used to create interactive  and dynamic pages.
+Used in Web Forms Validations.
+Used in Web Applications Development
+Used to develop Hybrid Mobile Applications
+Used for server side business Service Implementation.
+Used to create Windows desktop applications
+Used to create cross-platform applications via frameworks.
+Used for Inserting and swapping Contents in Web Pages
+Used across various platforms and browsers 
+
+Get Started
+Writing First JavaScript Code
+Variables and Statements
+Comments & No Script
+Running JavaScript programs
+Using  IDE’s for javascript
+External JavaScript File
+Benefits of using External Files
+
+Writing and Running first JavaScript Program
+The script tags and type attribute are required to include JavaScript code in an HTML file.  Include script in body tag in html file run the program.
+<html>
+<head>
+<title>hello</title>
+<script type="text/javascript"> 
+function callme() {
+alert("hello world programming");
+  }
+</script>
+</head>
+<body>
+<input type="button" name="b"  value="Click"  onclick="callme()" />
+</body>
+</html>
+
+2. Running JavaScript Program
+The script tags and type attribute are required to include JavaScript code in an HTML file.  Include script in head tag in html file run the program.
+<html>
+<head>
+<title>hello</title>
+<script type="text/javascript"> 
+ /*Example statement here */    
+  document.write('hello world');
+</script>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+3. Running JavaScript Program
+1.Using Browser and Text Editor – Enter info in editor and save file as html and then launch in browser. To see the output, double click on file in folder to see output in browser.
+<html><head>
+<title>My First Javscript program</title> 
+<script type="text/javascript"> 
+function callme(){
+alert("Hello world");  document.write(‘Hello World”); // console.log((‘Hello World”);  }
+Function onmouse() { alert(‘on mouse over’);}
+}
+</script>
+</head>
+<body>
+<button  type="button"  name="Click me"  onClick="callme()">Click Me</button>
+<input type=“text” name=“tex”  id=“nam”  size=“30”  onMouseOver=“onmouse()” />
+</body>
+</html>
+
+
+
+4. Running JavaScript Program
+We can install IDE’s like webstorm, jsfiddle, sublimetext  etc and run javascript programs.
+Follow these steps to run on webstorm
+a). Install nodejs software
+b) Install webstorm 11.0 and above from jetBrains
+c) Choose workspace directory
+d) Create new project
+e) Choose javaScript option to create javascript file
+f) Key in text shown below and save as first.js
+   console.log(' Hello World'); 
+g) Use run option and choose your program.
+h) See Output on console:   Hello World
+
+
+
+
+
+
+
+Local and Global Variables
+There are two types of variables: local and global. 
+
+Local variables 
+Using the var keyword along with  the variable name is local because it cannot be accessed anywhere outside the scope where we declare it. 
+Declaring statement using local variables
+var num = 10;
+document.write("The value of num is: "+ num);
+
+Global variables 
+Declaring the variable without the var keyword, it is accessible throughout the entire script, not only within that function. Which makes it global within script tag.
+Declaring statement using global variables
+Storing similar values in an array
+var colors = new Array("orange", "blue", "red", "brown");
+var colors = new Array(); 
+colors[0] = "orange"; colors[1] = "blue"; colors[2] = "red"; colors[3] = "brown"; 
+
+
+
+Comments & NoScript  Tag
+
+The <noscript> tag is used to show content for users who have disabled scripts in browser or does not supported from browser.
+The <noscript> tag can be used in in <head> and <body>.
+
+Using noscript  tag:
+<script>document.write(“My First Javascript Programming!")</script><noscript>browser does not support JavaScript!</noscript> 
+
+use comment tag to "hide" scripts from browsers without support for client-side scripts <script>function displayMe() {  alert("My First Javascript Programming!")}</script>  
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>noscript Tag</title>
+</head>
+<body>
+<script type = "text/JavaScript">
+document.write("Hello JavaScript commented!")
+</script>
+ <noscript>
+browser does not support JavaScript!
+</noscript>
+</body>
+</html>
+
+External JavaScript File
+Syntax for Using External JavaScript File
+<script src=“file.js”></script>
+Separate javascript file will be created to include in other files.
+Use comments to hide JavaScript code from browsers that do not support it
+<html>
+<head><title>Using External JS file </title>
+<script src=“js/external.js"></script>
+</head>
+<body>
+<input type="button" name="b"  value="Click"  onclick="callme()" />
+<body>
+</html>
+//  write this in external.js file
+function callme() {
+alert('Hello External');
+}
+
+
+Benefits:
+
+External JavaScript files are the most common way to include JavaScript code.
+Search engines can crawl and index web site faster if there is less code within HTML page.
+Keeping your JavaScript code separate from HTML is cleaner and ultimately easier to manage.
+On Including multiple JavaScript files in  HTML code we can separate the JavaScript files into different folder structures on web server. 
+Clean, organized code is always key to manage project easily.
+JavaScript Client logic and HTML presentation can be managed better.
+We can manage development  team well with separation of  roles
