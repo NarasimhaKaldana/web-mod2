@@ -1,0 +1,54 @@
+1.what is cloud computing?
+cloud computing means storing and accessing the data and programs on remote servers that are hosted on the internet instead of the computer’s hard drive or local server. Cloud computing is also referred to as Internet-based computing. 
+
+[cloud providers own massive datacenters which have hundreds of servers, storage sysstems and critical to the organization's working
+users can access any service based on their requirement
+users only pay for the services they use and nothing else
+cloud computing is used for the following types of services 1.machine learning and data analysis 2.data storage and backup 3. streamimg media content
+4.creating and testoing applications 5.automating software delivery 6.hosting blogs and applications]
+
+
+(Cloud computing is the process of data storing  and
+with the cloud we can load our data  at anywhere with our credentials.)
+
+
+
+2.what is the need for cloud computing?
+Cloud computing provides on-demand access to computing resources like servers, data storage, networks, applications, and development tools. These computing capabilities are delivered as a service. Companies can rent servers to save costs on building in-house data centers.
+
+The most common models of cloud services are:
+
+Infrastructure as a Service (IaaS)
+Platform as a Service (PaaS)
+Software as a Service (SaaS)
+
+1.cost effective 2.performance 3.data and security 4.faster deployment and market release 5.ease of scaling 6.remote access and availability 7.collabaration and productivity 8.disaster recovery 9.competitive edge 10.innovation 11.
+
+
+
+(By the cloud computing we can access our data anywhere by our credentials.)
+
+3.what is the difference between web and cloud?
+A key difference between cloud and web applications is architecture. A web application or web-based application must have a continuous internet connection to function. Conversely, a cloud application or cloud-based application performs processing tasks on a local computer or workstation.
+
+
+
+(web is the data provided by the server 
+cloud will provides the data which we uploaded.)
+
+4.to run an enterprise application what all do we need?
+Enterprise app development is the process of developing scalable apps that helps companies facilitate their business scalable apps that help companies facilitate tehir business processes. for example, an enterprise app helps to :
+* keep company data updated across systems 
+*align company divisions towards common goals 
+*reduse handoff expenses between departments 
+*help management to make data informed decisions 
+* how a centralized place to manage company processes.
+
+(1. server 2.client 3.cloud 4.specifications 5.backup storage)
+
+5.what is devops?
+DevOps is a methodology in the software development and IT industry. Used as a set of practices and tools, DevOps integrates and automates the work of software development and IT operations as a means for improving and shortening the systems development life cycle.
+
+
+
+

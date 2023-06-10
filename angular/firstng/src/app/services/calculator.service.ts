@@ -7,7 +7,7 @@ export class CalculatorService {
 
   factorial(n:number){
     var fact=1;
-    for(var i=1;i<=n;i++){
+    for(var i=1;i<=n;i++){   
       fact=fact*1;
     }return fact;
   }

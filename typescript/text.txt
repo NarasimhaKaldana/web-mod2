@@ -1,0 +1,20 @@
+
+@SpringBootTest
+@AutoConfigureMockMvc
+
+@Test
+public void shouldSavaAProduct() throws Exception{
+ProductDTO productDTO = ProductDTO.builder()
+.name("SamsungS10")
+.description("SomeDescription")
+.build();
+ObjectMapper objectMapper = new ObjectMapper();
+
+String stringValue = objectMapper.writeValueAsString(productDTO);
+
+mocMvc.perform(MockMvcRequestBuilders.post("/product")
+.accept(MediaType.APPLICATION_JSON_VALUE)
+.contentType(MediaType.APPLICATION_JSON_VALUE)
+.content(stringValue)
+          )andExpect(MockMvcResultMatchers.status().isCreated());
+}

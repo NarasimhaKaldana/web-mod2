@@ -1,0 +1,153 @@
+Steps to create a discovery server service - 
+
+Create a new spring boot project.
+Add the following dependencies - Eureka server.
+Add @Enable Eureka Server annotation to the discovery service application class.
+Go to the application.properties files and add this following entries :-
+
+spring.application.service = eureka
+server.port = 8761
+
+eureka.client.fetch-registry = false
+eureka.server.wait-time-in-ms-when-sync-empty = 0
+
+save and run the spring boot application
+
+open the browser and request the service - https://localhost:8761
+
+creating proxy service or edage service
+
+//always add web-tools even if it is told or not
+
+add the following dependencies - 
+ <dependency>
+     <groupId>org.springframework.cloud</groupId>
+     <artifactId>spring-cloud-starter-zuul</artifactId>
+ </dependency>
+
+ <dependency>
+     <groupId>org.springframework.cloud</groupId>
+     <artifactId>spring-cloud-starter-eureka</artifactId>
+ </dependency>
+
+
+ <dependency>
+     <groupId>org.springframework.boot</groupId>
+     <artifactId>spring-cloud-starter-web</artifactId>
+ </dependency>
+
+//zuul will not appear in the available dependencies list
+add below dependency in pom.xml - 
+    <dependency>
+     <groupId>org.springframework.cloud</groupId>
+     <artifactId>spring-cloud-starter-zuul</artifactId>
+   </dependency>
+
+------------------------------------------------------------------
+
+Go to ZuulServiceApplication class (main class) and enable zuul proxy
+
+@SpringBootApplication
+// @EnableEurekaClient
+@EnableZuulProxy
+
+------------------------------------------------------------------
+
+Go to resources -> application.properties -
+
+zuul.routes.helloserver.path=/**
+zuul.routes.helloserver.url=http://localhost:8094
+zuul.routes.helloclient.url=http://localhost:8093/api/client
+eureka.client.serviceUrl.defaultZone=http://localhost:8761/eureka  //requires for the proxy- 
+                                               //service to discover with register service.
+server.port=8093
+spring.application.name=zuul-service
+
+-------------------------------------------------------------
+
+Start zuul microservice
+
+Take Boot Dashboard
+
+Developing functional microservices which can be loosely called a server
+
+----------------------------------------------------------------
+
+Create a new Spring Boot application
+
+Add these dependencies
+    <dependency>
+     <groupId>org.springframework.boot</groupId>
+     <artifactId>spring-boot-starter-web</artifactId>
+   </dependency>
+
+    <dependency>
+     <groupId>org.springframework.cloud</groupId>
+     <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+   </dependency>
+
+
+------------------------------------------------------------------
+HelloserverApplication.java
+
+@EnableEurekaClient
+@SpringBootApplication
+
+------------------------------------------------------------------
+//API Gateway is also known as routing server
+Create one rest API
+(package->class)
+  //sir will share the code
+
+------------------------------------------------------------------
+application.properties
+
+spring.application.name=helloserver
+spring.server.port=8094
+eureka.client.register-with-eureka=true
+eureka.fetch-registry=true
+eureka.service-url.defaultZone=http://localhost:8761/eureka
+eureka.instance.hostname=localhost
+
+-------------------------------------------------------------------
+Developing Client services
+
+create a new spring boot starter project
+
+add the following dependencies
+
+
+    <dependency>
+     <groupId>org.springframework.boot</groupId>
+     <artifactId>spring-boot-starter-web</artifactId>
+   </dependency>
+
+
+    <dependency>
+     <groupId>org.springframework.cloud</groupId>
+     <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+     <version>3.1.3</version>
+   </dependency>
+
+----------------------------------------------------------------------------------
+package com.cts.client;
+
+@EnableEurekaClient
+@SpringBootApplication
+
+public class HelloclientApplication
+
+----------------------------------------------------------------------------------
+(We are developing client part)
+create one REST API to consume the service created above
+
+----------------------------------------------------------------------------------
+application.properties
+
+server.port=892
+spring.application.name=hello.client
+
+eureka.client.register.with-eureka = true
+eureka.client.fetch-registry = true
+eureka.client.service-url = defaultZone:http://localhost:8761/eureka
+eureka.instance.hostname=localhost
